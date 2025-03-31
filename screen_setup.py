@@ -42,8 +42,11 @@ class ScreenSetup:
 
         # Save to .env file
         dotenv_file = find_dotenv()
-        set_key(dotenv_file, "WIDTH", str(self.width), quote_mode="never")
-        set_key(dotenv_file, "HEIGHT", str(self.height), quote_mode="never")
+        if dotenv_file:
+            set_key(dotenv_file, "WIDTH", str(self.width), quote_mode="never")
+            set_key(dotenv_file, "HEIGHT", str(self.height), quote_mode="never")
+        else:
+            print("Warning: .env file not found. Screen dimensions will not be saved.")
     
     def width_adjust(self, x: int) -> int:
         """Adjusts an x coordinate to screen width."""
