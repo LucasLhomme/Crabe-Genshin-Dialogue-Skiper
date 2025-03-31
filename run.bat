@@ -1,3 +1,3 @@
 pushd "%~dp0"
-py ./main.py
+python ./main.py
 @pause
