@@ -6,10 +6,10 @@ from typing import Tuple, Union
 from time import perf_counter, sleep
 
 from pyautogui import click, getActiveWindowTitle, pixel
-from pynput.mouse import Controller
-from pynput.keyboard import Key, KeyCode
-import win32gui
-import win32con
+from pynput.mouse import Controller # type: ignore
+from pynput.keyboard import Key, KeyCode # type: ignore
+import win32gui # type: ignore
+import win32con # type: ignore
 
 from constants import (COLOR_AUTOPLAY_ICON, COLOR_WHITE, 
                      STATUS_RUN, STATUS_PAUSE, STATUS_EXIT,

@@ -6,7 +6,7 @@ Program to automatically skip dialogues in Genshin Impact.
 import os
 import sys
 from threading import Thread
-from pynput.keyboard import Listener
+from pynput.keyboard import Listener # type: ignore
 
 from screen_setup import ScreenSetup  
 from dialogue_skipper import DialogueSkipper
